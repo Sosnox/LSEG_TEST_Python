@@ -6,13 +6,13 @@ def passObject(obj, key):
     return obj
 
 def readFileJson(jsonFile):
-    # Read File Json
+    # Read File Json and return Object
     with open(jsonFile, "r") as f:
         jsonFile = f.read()
     return eval(jsonFile)
 
 def main():
-    pathData = "data_2.json"
+    pathData = "data-1.json"
     key = input("Enter key Format like : a/b/c ")
     ObjectList =  readFileJson(pathData)
     result = passObject(ObjectList, key)
